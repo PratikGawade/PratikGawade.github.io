@@ -7,14 +7,36 @@ weight: 3
 
 # **About Me**
 
-Hi I am **{{ site.author.name }}** :wave:,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Hi I am **{{ site.author.name }}** :wave:,<br><br>
+An IT engineer with a passion for all things tech! I have been working in the field for the past 3 years. Currently, I'm working as a Technical Analyst at Nepa where I have been honing my skills and building my knowledge base.
+<hr>
 
+# **Skills**
+> Programming languages: **Python, Javascript, Typescript** <br>
+<!-- <hr> -->
+> OS Platform: **Linux** <br>
+<!-- <hr> -->
+> Containerization Tool: **Docker, Kubernetes** <br>
+<!-- <hr> -->
+> Cloud Platform: **AWS (EKS, EC2, S3, EBS, ELB, IAM, VPC, etc)** <br>
+<!-- <hr> -->
+> Automation Tool: **Ansible, Terraform** <br>
+<!-- <hr> -->
+> Database: **MySQL, MongoDB** <br>
+<!-- <hr> -->
+> Version Control Tool: **Git, Github** <br>
+<!-- <hr> -->
+> Monitoring Tool: **Prometheus** <br>
+<!-- <hr> -->
+> Webdev Framework: **VueJS** <br>
+<!-- <hr> -->
+
+<!-- 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
 {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
-</div>
+</div> -->
 
-<div class="row">
+<!-- <div class="row">
 {% include about/timeline.html %}
-</div>
+</div> -->
