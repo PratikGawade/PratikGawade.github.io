@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: About Me
+permalink: /aboutme/
 weight: 3
 ---
 
@@ -12,31 +12,31 @@ An IT engineer with a passion for all things tech! I have been working in the fi
 <hr>
 
 # **Skills**
-> Programming languages: **Python, Javascript, Typescript** <br>
+> Programming languages: {% include elements/text-style.html text="Python, Javascript, Typescript" style="info" %}
 <!-- <hr> -->
-> OS Platform: **Linux** <br>
+> OS Platform: {% include elements/text-style.html text="Linux" style="info" %}
 <!-- <hr> -->
-> Containerization Tool: **Docker, Kubernetes** <br>
+> Containerization Tool: {% include elements/text-style.html text="Docker, Kubernetes" style="info" %}
 <!-- <hr> -->
-> Cloud Platform: **AWS (EKS, EC2, S3, EBS, ELB, IAM, VPC, etc)** <br>
+> Cloud Platform: {% include elements/text-style.html text="AWS (EKS, EC2, S3, EBS, ELB, IAM, VPC, etc)" style="info" %}
 <!-- <hr> -->
-> Automation Tool: **Ansible, Terraform** <br>
+> Automation Tool: {% include elements/text-style.html text="Ansible, Terraform" style="info" %}
 <!-- <hr> -->
-> Database: **MySQL, MongoDB** <br>
+> Database: {% include elements/text-style.html text="MySQL, MongoDB" style="info" %}
 <!-- <hr> -->
-> Version Control Tool: **Git, Github** <br>
+> Version Control Tool: {% include elements/text-style.html text="MySQL, MongoDB" style="info" %}
+> Monitoring Tool: {% include elements/text-style.html text="Prometheus" style="secondary" %}
 <!-- <hr> -->
-> Monitoring Tool: **Prometheus** <br>
+> Webdev Framework: {% include elements/text-style.html text="VueJS" style="success" %} 
 <!-- <hr> -->
-> Webdev Framework: **VueJS** <br>
-<!-- <hr> -->
+> Cloud Platform: {% include elements/text-style.html text="GitHub" style="primary" %}
+
+
+
+
 
 <!-- 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
 {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
-</div> -->
-
-<!-- <div class="row">
-{% include about/timeline.html %}
 </div> -->
