@@ -6,7 +6,7 @@ color: primary
 description: A quick introduction to the Containers and popular containerization tool Docker.
 ---
 
-Author: **Pratik Gawade**
+Author: Pratik Gawade
 
 ![](https://d1.awsstatic.com/acs/characters/Logos/Docker-Logo_Horizontel_279x131.b8a5c41e56b77706656d61080f6a0217a3ba356d.png)
 This tutorial will give you a basic understanding of Containers and popular containerization tool Docker.
@@ -27,7 +27,7 @@ A `container` is a standard unit of software that packages up code and all its d
 >According to [IBM](https://www.ibm.com/topics/containerization#toc-what-is-co-r25Smlqq),
 Containerization is the packaging of software code with just the operating system (OS) libraries and dependencies required to run the code to create a single lightweight executable—called a container—that runs consistently on any infrastructure.
 
-Now that we know about an `image` and `container`, let's understand `docker`.
+Now that we know about the `images` and `containers`, let's understand `docker`.
 
 `Docker` is a popular open-source platform for building, packaging, and deploying applications in containers.
 
@@ -36,6 +36,7 @@ Docker makes it easy to create and manage containers by providing a simple and c
 Overall, Docker provides a powerful and efficient way to package and deploy applications, making it a popular choice for containerization in DevOps and cloud-native environments.
 
 ___
-Quick links : 
-[Docker Commands]
-[Install Docker](https://docs.docker.com/engine/install/)
+
+References : 
+1. [freecodecamp](https://www.freecodecamp.org/news/the-docker-handbook/)
+2. [docker](https://docs.docker.com/)
