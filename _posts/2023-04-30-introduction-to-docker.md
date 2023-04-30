@@ -1,12 +1,12 @@
 ---
-title: Learn React.js in 5 minutes
-tags: [React, JavaScript, Web Development]
+title: Introduction to Docker
+tags: [Docker, Dockerhub, Containers]
 style: border
 color: primary
-description: A quick introduction to the popular JavaScript library.
+description: A quick introduction to the popular containerization tool - Docker.
 ---
 
-Source: [freecodecamp](https://medium.freecodecamp.org/learn-react-js-in-5-minutes-526472d292f4)
+Author: **Pratik Gawade**
 
 This tutorial will give you a basic understanding of React.js by building a very simple application. I’ll leave out everything which I don’t think is core.
 
