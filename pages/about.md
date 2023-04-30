@@ -12,24 +12,25 @@ An IT engineer with a passion for all things tech! I have been working in the fi
 <hr>
 
 # **Skills**
-> Programming languages: {% include elements/text-style.html text="Python, Javascript, Typescript" style="info" %}
+> Programming languages: {% include elements/text-style.html text="Python, Javascript, Typescript" color="info" %}
 <!-- <hr> -->
-> OS Platform: {% include elements/text-style.html text="Linux" style="warning" %}
+> OS Platform: {% include elements/text-style.html text="Linux" color="warning" %}
 <!-- <hr> -->
-> Containerization Tool: {% include elements/text-style.html text="Docker, Kubernetes" style="success" %}
+> Containerization Tool: {% include elements/text-style.html text="Docker, Kubernetes" color="success" %}
 <!-- <hr> -->
-> Cloud Platform: {% include elements/text-style.html text="AWS (EKS, EC2, S3, EBS, ELB, IAM, VPC, etc)" style="dark" %}
+> Cloud Platform: {% include elements/text-style.html text="AWS (EKS, EC2, S3, EBS, ELB, IAM, VPC, etc)" color="dark" %}
 <!-- <hr> -->
-> Automation Tool: {% include elements/text-style.html text="Ansible, Terraform" style="secondary" %}
+> Automation Tool: {% include elements/text-style.html text="Ansible, Terraform" color="secondary" %}
 <!-- <hr> -->
-> Database: {% include elements/text-style.html text="MySQL, MongoDB" style="dark" %}
+> Database: {% include elements/text-style.html text="MySQL, MongoDB" color="danger" %}
 <!-- <hr> -->
-> Version Control Tool: {% include elements/text-style.html text="MySQL, MongoDB" style="info" %}
-> Monitoring Tool: {% include elements/text-style.html text="Prometheus" style="light" %}
+> Version Control Tool: {% include elements/text-style.html text="Git, Github" color="info" %}
+> Monitoring Tool: {% include elements/text-style.html text="Prometheus" color="dark" %}
 <!-- <hr> -->
-> Webdev Framework: {% include elements/text-style.html text="VueJS" style="danger" %} 
+> Webdev Framework: {% include elements/text-style.html text="VueJS" color="danger" %} 
 <!-- <hr> -->
-> Cloud Platform: {% include elements/text-style.html text="GitHub" style="success" %}
+> Data Manipulation: {% include elements/text-style.html text="Pandas, Numpy" color="success" %}
+> Data Modeling: {% include elements/text-style.html text="Regression Algoriths, Decision Trees, Random Forest, Naive Bayes, SVM, etc" color="warning" %}
 
 
 
