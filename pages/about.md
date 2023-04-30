@@ -30,7 +30,7 @@ An IT engineer with a passion for all things tech! I have been working in the fi
 > Webdev Framework: {% include elements/text-style.html text="VueJS" color="danger" %} 
 <!-- <hr> -->
 > Data Manipulation: {% include elements/text-style.html text="Pandas, Numpy" color="success" %}
-> Data Modeling: {% include elements/text-style.html text="Regression Algoriths, Decision Trees, Random Forest, Naive Bayes, SVM, etc" color="warning" %}
+> Data Modeling: {% include elements/text-style.html text="Linear Regre., Logistic Regre., Decision Trees, Random Forest, Naive Bayes, SVM, etc" color="warning" %}
 
 
 
