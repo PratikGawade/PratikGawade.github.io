@@ -12,69 +12,34 @@ Source: [TechWorld with Nana](https://youtu.be/3c-iBn73dDE)
 
 
 
-## What is a Callback?
+## Introduction:
+In the world of modern application development, containerization has become a game-changer. Docker provides a seamless way to package applications and their dependencies, ensuring consistent deployment across different environments. In this tutorial, we'll walk through the process of building a simple user profile app using Docker, Node.js with Express, and MongoDB. By the end of this guide, you'll have a clear understanding of how to containerize your applications, manage data storage with Docker volumes, and troubleshoot common issues.
 
-**Simply put:** A callback is a function that is to be executed **after** another function has finished executing — hence the name ‘call back’.
+## Prerequisites:
+Before we dive into the details, make sure you have the following tools installed on your system:
 
-**More complexly put:** In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions. Functions that do this are called **higher-order functions**. Any function that is passed as an argument is called a **callback function**.
+1. Docker: The containerization platform that will help us package our app and its dependencies.
+2. Docker Compose: A tool for defining and running multi-container Docker applications.
+Application Architecture:
+Our user profile app consists of three main components:
 
-^ That’s a lot of words. Lets look at some examples to break this down a little more.
+1. Frontend: The user interface, built using index.html.
+2. Backend: The server logic, powered by Node.js and Express.
+3. Database: MongoDB, which stores user profile data.\
 
-## Why do we need Callbacks?
+## Clone the Repository:
+To get started, clone the repository containing the demo app:
+  https://gitlab.com/nanuchi/techworld-js-docker-demo-app
 
-For one very important reason — JavaScript is an event driven language. This means that instead of waiting for a response before moving on, JavaScript will keep executing while listening for other events. Lets look at a basic example:
-
-```javascript
-function first(){
-  console.log(1);
-}
-function second(){
-  console.log(2);
-}
-first();
-second();
+## Setting Up MongoDB and MongoDB Express:
+We'll begin by pulling the necessary Docker images for MongoDB and MongoDB Express. Open your terminal and execute the following commands:
+```
+docker pull mongo
+docker pull mongo-express
 ```
 
-As you would expect, the function `first` is executed first, and the function `second` is executed second — logging the following to the console:
-
-```javascript
-// 1
-// 2
-```
-
-All good so far.
-
-But what if function `first` contains some sort of code that can’t be executed immediately? For example, an API request where we have to send the request then wait for a response? To simulate this action, were going to use `setTimeout` which is a JavaScript function that calls a function after a set amount of time. We’ll delay our function for 500 milliseconds to simulate an API request. Our new code will look like this:
-
-```javascript
-function first(){
-  // Simulate a code delay
-  setTimeout( function(){
-    console.log(1);
-  }, 500 );
-}
-function second(){
-  console.log(2);
-}
-first();
-second();
-```
-
-It’s not important that you understand how `setTimeout()` works right now. All that matters is that you see we’ve moved our `console.log(1);` inside of our 500 millisecond delay. So what happens now when we invoke our functions?
-
-```javascript
-first();
-second();
-// 2
-// 1
-```
-
-Even though we invoked the `first()` function first, we logged out the result of that function after the `second()` function.
-
-It’s not that JavaScript didn’t execute our functions in the order we wanted it to, it’s instead that **JavaScript didn’t wait for a response from `first()` before moving on to execute `second()`**.
-
-So why show you this? Because you can’t just call one function after another and hope they execute in the right order. {% include elements/highlight.html text="Callbacks are a way to make sure certain code doesn’t execute until other code has already finished execution." %}
-
+## Creating the Docker Image for the Application:
+Next, we need to create a Docker image for our user profile application. To do this, we'll create a Dockerfile in the root directory of your app:
 ## Create a Callback
 
 _Alright, enough talk, lets create a callback!_
