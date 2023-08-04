@@ -20,7 +20,8 @@ Before we dive into the details, make sure you have the following tools installe
 
 1. Docker: The containerization platform that will help us package our app and its dependencies.
 2. Docker Compose: A tool for defining and running multi-container Docker applications.
-Application Architecture:
+
+## Application Architecture:
 Our user profile app consists of three main components:
 
 1. Frontend: The user interface, built using index.html.
@@ -29,7 +30,9 @@ Our user profile app consists of three main components:
 
 ## Clone the Repository:
 To get started, clone the repository containing the demo app:
+```
   https://gitlab.com/nanuchi/techworld-js-docker-demo-app
+```
 
 ## Setting Up MongoDB and MongoDB Express:
 We'll begin by pulling the necessary Docker images for MongoDB and MongoDB Express. Open your terminal and execute the following commands:
@@ -40,6 +43,61 @@ docker pull mongo-express
 
 ## Creating the Docker Image for the Application:
 Next, we need to create a Docker image for our user profile application. To do this, we'll create a Dockerfile in the root directory of your app:
+```
+# Use an official Node.js runtime as the base image
+FROM node:14
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port that the app runs on
+EXPOSE 3000
+
+# Define the command to run your app
+CMD ["node", "index.js"]
+
+```
+
+## Containerizing the Application:
+With the Dockerfile in place, we're ready to containerize our application. Open your terminal and run the following commands:
+
+docker build -t user-profile-app .
+
+## Creating a Docker Network:
+
+```
+docker network create user-profile-network
+
+```
+
+## Running MongoDB with Docker:
+Start the MongoDB container and link it to the created network:
+```
+docker run -d --name user-profile-db --network user-profile-network mongo
+
+```
+## Running MongoDB Express:
+Launch MongoDB Express to manage the database:
+```
+docker run -d --name mongo-express --network user-profile-network -e ME_CONFIG_MONGODB_SERVER=user-profile-db -p 8081:8081 mongo-express
+```
+
+## Running the User Profile Application:
+Finally, run the user profile app container and link it to the network:
+```
+docker run -d --name user-profile-app --network user-profile-network -e MONGO_URL=mongodb://user-profile-db:27017/user-profile-db -p 3000:3000 user-profile-app
+
+```
+
 ## Create a Callback
 
 _Alright, enough talk, lets create a callback!_
