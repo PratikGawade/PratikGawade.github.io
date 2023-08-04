@@ -98,6 +98,44 @@ docker run -d --name user-profile-app --network user-profile-network -e MONGO_UR
 
 ```
 
+## Running the Application with Docker Compose:
+Now, let's define a docker-compose.yml file to simplify the process of running our app:
+```
+version: '3'
+services:
+  app:
+    image: user-profile-app
+    ports:
+      - "3000:3000"
+    networks:
+      - user-profile-network
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/user-profile-db
+
+  mongo:
+    image: mongo
+    networks:
+      - user-profile-network
+    volumes:
+      - mongo-data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    networks:
+      - user-profile-network
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_MONGODB_URL=mongodb://mongo:27017/
+networks:
+  user-profile-network:
+volumes:
+  mongo-data:
+```
+
+## Conclusion:
+By manually leveraging Docker's capabilities, you've successfully built a simple user profile app using Node.js, Express, and MongoDB. This approach provides you with a deeper understanding of the inner workings of Docker containers and how they interact. As you continue your exploration of containerization and application deployment, consider delving into more advanced Docker features and best practices. Your newfound knowledge will empower you to confidently manage complex application environments. Happy coding!
+
 ## Create a Callback
 
 _Alright, enough talk, lets create a callback!_
