@@ -8,7 +8,7 @@ weight: 3
 # **About Me**
 
 Hi I am **{{ site.author.name }}** :wave:,<br><br>
-An IT engineer with a passion for all things tech! I have been working in the field for the past 3 years. Currently, I'm working as a Technical Analyst at Nepa where I have been honing my skills and building my knowledge base.
+An IT engineer with a passion for all things tech! I have been working in the field for the past 3 years. Currently, I'm working as a Software Developer at Nepa where I have been honing my skills and building my knowledge base.
 <hr>
 
 # **Skills**
